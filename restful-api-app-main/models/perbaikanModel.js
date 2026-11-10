@@ -16,4 +16,4 @@ const perbaikanSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('Perbaikan', perbaikanSchema);
+module.exports = mongoose.model('perbaikan', perbaikanSchema);

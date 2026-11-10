@@ -15,14 +15,10 @@ function angkaAman(nilai, bawaan, min, maks) {
   return Math.min(Math.max(n, min), maks);
 }
 
-exports.create = async (req, res) => {
-  try {
-    const perbaikan = await Perbaikan.create(req.body);//menyimpan data ke mongo DB
+  exports.create = async (req, res) => {
+    const perbaikan = await Perbaikan.create(req.body);
     res.status(201).json(perbaikan);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
-};
+  };
 
 exports.getAll = async (req, res) => {
   const filter = {};

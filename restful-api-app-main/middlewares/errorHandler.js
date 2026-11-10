@@ -13,6 +13,23 @@ function errorHandler(err, req, res, next) {
     return res.status(400).json({ message: 'Format JSON tidak valid' });
   }
 
+  if (err.name === 'ValidationError') {
+    const detail = Object.values(err.errors).map((e) => ({
+      field: e.path,
+      message: e.message,
+    }));
+    return res.status(400).json({ message: 'Validasi gagal', detail });
+  }
+
+  if (err.name === 'CastError') {
+    return res.status(400).json({ message: `Nilai tidak valid untuk ${err.path}` });
+  }
+
+  if (err.code === 11000) {
+    const field = Object.keys(err.keyValue || {}).join(', ');
+    return res.status(409).json({ message: `Nilai ${field} sudah dipakai` });
+  }
+
   const status = err.status || 500;
 
   if (status === 500) {
