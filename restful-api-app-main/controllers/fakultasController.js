@@ -1,4 +1,4 @@
-const fakultasModel = require('../models/fakultasModel');
+/* const fakultasModel = require('../models/fakultasModel');
 const { errorHttp } = require('../middlewares/errorHandler');
 
 exports.getAll = (req, res) => {
@@ -18,4 +18,4 @@ exports.create = (req, res, next) => {
 
   const baru = fakultasModel.create({ nama });
   res.status(201).json(baru);
-};
+}; */

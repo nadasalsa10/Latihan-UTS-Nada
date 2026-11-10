@@ -4,16 +4,16 @@ app.js => routes => controllers => models
 PathPendukung dan PathUtama lihat pada file daftar topik (SPON)
 
 Model
-- prodiModel.js			=> PathPendukung => Contoh: kategoriModel.js
-- mahasiswaModel.js		=> PathUtama	 => Contoh: bukuModel.js
+- prodiModel.js			=> PathPendukung => Contoh: TeknisiModel.js
+- mahasiswaModel.js		=> PathUtama	 => Contoh: perbaikanModel.js
 
 Controller
-- prodiController.js		=> kategoriController.js
-- mahasiswaController.js	=> bukuController.js
+- prodiController.js		=> perbaikanController.js
+- mahasiswaController.js	=> teknisiController.js
 
 Route
-- prodiRoute.js			=> kategoriRoute.js
-- mahasiswaRoute.js		=> bukuRoute.js
+- prodiRoute.js			=> teknisiRoute.js
+- mahasiswaRoute.js		=> perbaikanRoute.js
 
 Clone repository: https://github.com/nurrachmat/restful-api-app
 
