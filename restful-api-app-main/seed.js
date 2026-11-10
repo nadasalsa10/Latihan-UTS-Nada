@@ -1,4 +1,4 @@
-// seed.js
+/* // seed.js
 // Mengisi basis data dengan 3 prodi dan 25 mahasiswa. Aman dijalankan berulang:
 // data lama dihapus dulu.
 require('dotenv').config({ quiet: true });
@@ -34,4 +34,4 @@ async function main() {
   await mongoose.disconnect();
 }
 
-main().catch((err) => { console.error(err.message); process.exit(1); });
+main().catch((err) => { console.error(err.message); process.exit(1); }); */
